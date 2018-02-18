@@ -1,0 +1,83 @@
+<html>
+	<head>
+		<title>
+			My first project in JS.
+		</title>
+		<style>
+		body {
+			margin: 0px;
+			padding: 0px;
+		}
+		</style>
+	</head>
+	<body onresize="Res()">
+		<canvas id="GameCanvas" style="background-color: Blue" width="300" height="250">
+		</canvas>
+		<script type="text/javascript">
+			var canvas = document.getElementById('GameCanvas');
+			var ctx = canvas.getContext("2d");
+			var h=0;
+			var v=0;
+			var dir={v:"down",h:"right"};
+			var squareSize=100;
+			var squareRatio=0.8;
+			function Res() {
+				var actualWidth = window.innerWidth;
+				var actualHeight = window.innerHeight;
+				canvas.setAttribute("width", actualWidth);
+				canvas.setAttribute("height", actualHeight);
+				doFrame();
+			}
+			function doFrame() {
+				ctx.clearRect(0,0,canvas.width,canvas.height);
+				ctx.fillStyle = "White";
+				ctx.fillRect(h,v,squareSize,squareSize);
+				ctx.fillStyle = "Grey";
+				ctx.fillRect(h+squareSize*squareRatio,v+squareSize*squareRatio,squareSize*(1-2*squareRatio),squareSize*(1-2*squareRatio));
+				ctx.fillStyle= "Black";
+				ctx.font = "Bold 20px Arial";
+				ctx.textAlign="center"; 
+				ctx.textBaseline = "middle";
+				ctx.fillText("IV.JS",h+squareSize/2,v+squareSize/2);
+				if (dir.v=="down") {
+					v+=1;
+				}
+				if (dir.v=="up") {
+					v-=1;
+				}
+				if (dir.h=="right") {
+					h+=1;
+				}
+				if (dir.h=="left") {
+					h-=1;
+				}
+				if (v<=0) {
+					v=0;
+					if (dir.v == "up") {
+						dir.v="down";
+					}
+				}
+				if (h<=0) {
+					h=0;
+					if (dir.h == "left") {
+						dir.h="right";
+					}					
+				}
+				if (v>=canvas.height - squareSize) {
+					v = canvas.height - squareSize;
+					if (dir.v == "down") {
+						dir.v="up";
+					}
+				}
+				if (h>=canvas.width - squareSize) {
+					h = canvas.width - squareSize;
+					if (dir.h == "right") {
+						dir.h="left";
+					}
+				}
+			}
+			Res()
+			setInterval(doFrame,1);
+		</script>
+	</body>
+</html>
