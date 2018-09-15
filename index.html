@@ -1,45 +1,313 @@
+<!DOCTYPE html>
 <html>
 <head>
-	<title>Canvas magic</title>
+	<title>Glinsky's Hexagonal Chess</title>
+	<!-- 43px padding top for match -->
 	<style>
-		body {
-			margin: 0px;
-			padding: 0px;
-		}
+	h1 {
+		font-family: helvetica neue,Helvetica,Arial,sans-serif;
+	}
+	p {
+		font-family: "Segoe UI",Arial,sans-serif;
+	}
+	.inl {
+		float: left;
+	}
+	#container {
+		margin-right: 5vh;
+		width: 75vh;
+		height: 75vh;
+		text-align: center;
+	}
+	#board {
+		display: inline-block;
+		background-image: url("Glinski_Board.png");
+		background-size: 100% 103.5%;
+		width: 100%;
+		height: 100%;
+		font-size: 3vh;
+		outline: 1vh solid black;
+	}
+	#paddings {
+		width: 76%;
+		height: 86%;
+		padding-top: 6%;
+		padding-bottom: 8%;
+		padding-left: 12%;
+		padding-right: 12%;
+	}
+	.cell {
+		width: 9.0909%;
+		height: 4.7619%;
+		/*outline: 1px solid black;*/
+		display: table-cell;
+		float: left;
+		text-align: center;
+	}
 	</style>
 </head>
-<body onresize="Res()">
-	<canvas id="MagicCanvas" style="background-color: black" width="800" height="800">
-	</canvas>
-	<script type="text/javascript">
-		var canvas=document.getElementById("MagicCanvas");
-		function Res() {
-				var actualWidth = window.innerWidth;
-				var actualHeight = window.innerHeight;
-				canvas.setAttribute("width", actualWidth);
-				canvas.setAttribute("height", actualHeight);
-				doframe();
-			}
-		var frame=0;
-		var indexes = [Math.random()*30-15,Math.random()*30-15,Math.random()*30-15,Math.random()*30-15,Math.random()*30-15,Math.random()*30-15,Math.random()*30-15,Math.random()*30-15,Math.random()*30-15,Math.random()*30-15,Math.random()*30-15,Math.random()*30-15];
 
-		ctx = canvas.getContext("2d");
-		ctx.lineWidth = 2;
-		function doframe() {
-			framer = frame*3;
-			ctx.fillStyle = "RGBA(0,0,0,0.05)";
-			ctx.fillRect(0,0,canvas.width,canvas.height);
-			ctx.strokeStyle = "HSL(" + (2*framer) % 360 + ",100%,50%)" //+ (100 * Math.sin(frame/(60*2*Math.PI))) + "%" + "," + (100 * Math.sin(frame/(60*2*Math.PI))) + "%)3;
-			ctx.beginPath();
-			ctx.moveTo((0.5*canvas.width) + (0.5*canvas.width) * Math.sin(indexes[0]*(framer + 5*indexes[6])/(60*2*Math.PI)), (0.5*canvas.height) + (0.5*canvas.height) * Math.sin(indexes[1]*(framer + 5*indexes[7])/(60*2*Math.PI)));
-			ctx.lineTo((0.5*canvas.width) + (0.5*canvas.width) * Math.sin(indexes[2]*(framer + 5*indexes[8])/(60*2*Math.PI)), (0.5*canvas.height) + (0.5*canvas.height) * Math.sin(indexes[3]*(framer + 5*indexes[9])/(60*2*Math.PI)));
-			ctx.lineTo((0.5*canvas.width) + (0.5*canvas.width) * Math.sin(indexes[4]*(framer + 5*indexes[10])/(60*2*Math.PI)), (0.5*canvas.height) + (0.5*canvas.height) * Math.sin(indexes[5]*(framer + 5*indexes[11])/(60*2*Math.PI)));
-			ctx.closePath();
-			ctx.stroke();
-			frame += 1;
-		}
-		Res();
-		setInterval(doframe,1000.0/60.0);
-	</script>
+<body>
+
+	<h1 class="center">Hexagonal Chess</h1>
+
+	<div id="container" class="inl">
+	<div id="board">
+		<div id="paddings">
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell">&#9812</div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell">&#9818</div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+	</div></div></div>
+	<p class="center">This website contains a version of Glinski's hexagonal chess written in Javascript and compatible with most modern web browsers.</p>
+
+	<p class="center"><a href="https://en.wikipedia.org/wiki/Hexagonal_chess#Gli%C5%84ski's_hexagonal_chess"><b>Gliński's</b> hexagonal <b>chess</b></a>, invented by <strong>Władysław Gliński</strong> in 1936 and first launched in Britain in 1949, is "probably the most widely played of the hexagonal chess games".
+	</p>
 </body>
-</html>
