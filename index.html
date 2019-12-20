@@ -39,9 +39,12 @@
 		padding-right: 8.5%;
 	}
 	.cell {
+		/*outline: 3px solid black;*/
+	}
+	.s {
 		width: 9.0909%;
 		height: 4.7619%;
-		/*outline: 1px solid black;*/
+		/* outline: 3px solid red; */
 		display: table-cell;
 		float: left;
 		text-align: center;
@@ -55,261 +58,482 @@
 
 	<div id="container" class="inl">
 	<div id="board">
-		<div id="paddings">
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell">&#9812</div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
+	<div id="paddings">
 
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
+		<div class="s"></div>
+		<div class="s"></div>
+		<div class="s"></div>
+		<div class="s"></div>
+		<div class="s"></div>
+		<div class="s cell" id="5">&#9815</div>
+		<div class="s"></div>
+		<div class="s"></div>
+		<div class="s"></div>
+		<div class="s"></div>
+		<div class="s"></div>
 
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
+		<div class="s"></div>
+		<div class="s"></div>
+		<div class="s"></div>
+		<div class="s"></div>
+		<div class="s cell" id="15">&#9813</div>
+		<div class="s"></div>
+		<div class="s cell" id="17">&#9812</div>
+		<div class="s"></div>
+		<div class="s"></div>
+		<div class="s"></div>
+		<div class="s"></div>
 
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
+		<div class="s"></div>
+		<div class="s"></div>
+		<div class="s"></div>
+		<div class="s cell" id="25">&#9816</div>
+		<div class="s"></div>
+		<div class="s cell" id="27">&#9815</div>
+		<div class="s"></div>
+		<div class="s cell" id="29">&#9816</div>
+		<div class="s"></div>
+		<div class="s"></div>
+		<div class="s"></div>
 
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
+		<div class="s"></div>
+		<div class="s"></div>
+		<div class="s cell" id="35">&#9814</div>
+		<div class="s"></div>
+		<div class="s cell" id="37"></div>
+		<div class="s"></div>
+		<div class="s cell" id="39"></div>
+		<div class="s"></div>
+		<div class="s cell" id="41">&#9814</div>
+		<div class="s"></div>
+		<div class="s"></div>
 
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
+		<div class="s"></div>
+		<div class="s cell" id="45">&#9817</div>
+		<div class="s"></div>
+		<div class="s cell" id="47"></div>
+		<div class="s"></div>
+		<div class="s cell" id="49">&#9815</div>
+		<div class="s"></div>
+		<div class="s cell" id="51"></div>
+		<div class="s"></div>
+		<div class="s cell" id="53">&#9817</div>
+		<div class="s"></div>
 
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
+		<div class="s cell" id="55"></div>
+		<div class="s"></div>
+		<div class="s cell" id="57">&#9817</div>
+		<div class="s"></div>
+		<div class="s cell" id="59"></div>
+		<div class="s"></div>
+		<div class="s cell" id="61"></div>
+		<div class="s"></div>
+		<div class="s cell" id="63">&#9817</div>
+		<div class="s"></div>
+		<div class="s cell" id="65"></div>
 
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
+		<div class="s"></div>
+		<div class="s cell" id="67"></div>
+		<div class="s"></div>
+		<div class="s cell" id="69">&#9817</div>
+		<div class="s"></div>
+		<div class="s cell" id="71"></div>
+		<div class="s"></div>
+		<div class="s cell" id="73">&#9817</div>
+		<div class="s"></div>
+		<div class="s cell" id="75"></div>
+		<div class="s"></div>
 
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
+		<div class="s cell" id="77"></div>
+		<div class="s"></div>
+		<div class="s cell" id="79"></div>
+		<div class="s"></div>
+		<div class="s cell" id="81">&#9817</div>
+		<div class="s"></div>
+		<div class="s cell" id="83">&#9817</div>
+		<div class="s"></div>
+		<div class="s cell" id="85"></div>
+		<div class="s"></div>
+		<div class="s cell" id="87"></div>
 
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
+		<div class="s"></div>
+		<div class="s cell" id="89"></div>
+		<div class="s"></div>
+		<div class="s cell" id="91"></div>
+		<div class="s"></div>
+		<div class="s cell" id="93">&#9817</div>
+		<div class="s"></div>
+		<div class="s cell" id="95"></div>
+		<div class="s"></div>
+		<div class="s cell" id="97"></div>
+		<div class="s"></div>
+		
+		<div class="s cell" id="99"></div>
+		<div class="s"></div>
+		<div class="s cell" id="101"></div>
+		<div class="s"></div>
+		<div class="s cell" id="103"></div>
+		<div class="s"></div>
+		<div class="s cell" id="105"></div>
+		<div class="s"></div>
+		<div class="s cell" id="107"></div>
+		<div class="s"></div>
+		<div class="s cell" id="109"></div>
 
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
+		<div class="s"></div>
+		<div class="s cell" id="111"></div>
+		<div class="s"></div>
+		<div class="s cell" id="113"></div>
+		<div class="s"></div>
+		<div class="s cell" id="115"></div>
+		<div class="s"></div>
+		<div class="s cell" id="117"></div>
+		<div class="s"></div>
+		<div class="s cell" id="119"></div>
+		<div class="s"></div>
+		
+		<div class="s cell" id="121"></div>
+		<div class="s"></div>
+		<div class="s cell" id="123"></div>
+		<div class="s"></div>
+		<div class="s cell" id="125"></div>
+		<div class="s"></div>
+		<div class="s cell" id="127"></div>
+		<div class="s"></div>
+		<div class="s cell" id="129"></div>
+		<div class="s"></div>
+		<div class="s cell" id="131"></div>
 
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
+		<div class="s"></div>
+		<div class="s cell" id="133"></div>
+		<div class="s"></div>
+		<div class="s cell" id="135"></div>
+		<div class="s"></div>
+		<div class="s cell" id="137">&#9823</div>
+		<div class="s"></div>
+		<div class="s cell" id="139"></div>
+		<div class="s"></div>
+		<div class="s cell" id="141"></div>
+		<div class="s"></div>
+		
+		<div class="s cell" id="143"></div>
+		<div class="s"></div>
+		<div class="s cell" id="145"></div>
+		<div class="s"></div>
+		<div class="s cell" id="147">&#9823</div>
+		<div class="s"></div>
+		<div class="s cell" id="149">&#9823</div>
+		<div class="s"></div>
+		<div class="s cell" id="151"></div>
+		<div class="s"></div>
+		<div class="s cell" id="153"></div>
 
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
+		<div class="s"></div>
+		<div class="s cell" id="155"></div>
+		<div class="s"></div>
+		<div class="s cell" id="157">&#9823</div>
+		<div class="s"></div>
+		<div class="s cell" id="159"></div>
+		<div class="s"></div>
+		<div class="s cell" id="161">&#9823</div>
+		<div class="s"></div>
+		<div class="s cell" id="163"></div>
+		<div class="s"></div>
+		
+		<div class="s cell" id="165"></div>
+		<div class="s"></div>
+		<div class="s cell" id="167">&#9823</div>
+		<div class="s"></div>
+		<div class="s cell" id="169"></div>
+		<div class="s"></div>
+		<div class="s cell" id="171"></div>
+		<div class="s"></div>
+		<div class="s cell" id="173">&#9823</div>
+		<div class="s"></div>
+		<div class="s cell" id="175"></div>
 
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
+		<div class="s"></div>
+		<div class="s cell" id="177">&#9823</div>
+		<div class="s"></div>
+		<div class="s cell" id="179"></div>
+		<div class="s"></div>
+		<div class="s cell" id="181">&#9821</div>
+		<div class="s"></div>
+		<div class="s cell" id="183"></div>
+		<div class="s"></div>
+		<div class="s cell" id="185">&#9823</div>
+		<div class="s"></div>
 
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
+		<div class="s"></div>
+		<div class="s"></div>
+		<div class="s cell" id="189">&#9820</div>
+		<div class="s"></div>
+		<div class="s cell" id="191"></div>
+		<div class="s"></div>
+		<div class="s cell" id="193"></div>
+		<div class="s"></div>
+		<div class="s cell" id="195">&#9820</div>
+		<div class="s"></div>
+		<div class="s"></div>
 
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
+		<div class="s"></div>
+		<div class="s"></div>
+		<div class="s"></div>
+		<div class="s cell" id="201">&#9822</div>
+		<div class="s"></div>
+		<div class="s cell" id="203">&#9821</div>
+		<div class="s"></div>
+		<div class="s cell" id="205">&#9822</div>
+		<div class="s"></div>
+		<div class="s"></div>
+		<div class="s"></div>
 
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
+		<div class="s"></div>
+		<div class="s"></div>
+		<div class="s"></div>
+		<div class="s"></div>
+		<div class="s cell" id="213">&#9819</div>
+		<div class="s"></div>
+		<div class="s cell" id="215">&#9818</div>
+		<div class="s"></div>
+		<div class="s"></div>
+		<div class="s"></div>
+		<div class="s"></div>
 
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
+		<div class="s"></div>
+		<div class="s"></div>
+		<div class="s"></div>
+		<div class="s"></div>
+		<div class="s"></div>
+		<div class="s cell" id="225">&#9821</div>
+		<div class="s"></div>
+		<div class="s"></div>
+		<div class="s"></div>
+		<div class="s"></div>
+		<div class="s"></div>
 
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell">&#9818</div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
-		<div class="cell"></div>
 	</div></div></div>
+
+	<div id=turndisplay>White's turn</div>
+
+	<script>
+
+	// 0 means white, 1 means black
+
+	turn = 0;
+	picking = false;
+	picked = "";
+	
+	//white index 0, black index 1
+	
+	turntexts = ["White's turn", "Black's turn"];
+	pieces = ["\u2654\u2655\u2656\u2657\u2658\u2659","\u265A\u265B\u265C\u265D\u265E\u265F"];
+	// KING QUEEN ROOK BISHOP KNIGHT PAWN
+
+	dot = "\u2022";
+
+	pickedId = 0;
+
+
+	document.body.onclick = function(e) {   //when the document body is clicked
+
+	    if (window.event) {
+        	e = event.srcElement;           //assign the element clicked to e (IE 6-8)
+	    } else {
+	        e = e.target;                   //assign the element clicked to e
+    	}
+
+    	if (e.className && e.className.indexOf('cell') != -1) // If clicked on a cell
+    	{
+
+    		if ((picking == false) && (e.innerHTML != "") && (pieces[turn].indexOf(e.innerHTML) != -1)) // If clicked on your own piece while not lifted
+    		{
+    			pickedId = e.id;
+	        	picked = e.innerHTML;
+        		e.innerHTML = "";
+        		picking = true;
+
+        		if ((picked == "\u2654") || (picked == "\u265A")) // Either king
+        		{
+
+        			var hexagonId;
+        			var hexagon;
+
+	       			for (hexagonId = 0; hexagonId <= 230; hexagonId++)
+	       			{
+
+        				hexagon = document.getElementById(hexagonId);
+        			
+        				if (hexagon)
+       					{
+	        				if ((Math.abs(pickedId - hexagonId) == 22) || (Math.abs(pickedId - hexagonId) == 12) || (Math.abs(pickedId - hexagonId) == 10))
+	        				{
+
+        						if ((hexagon.innerHTML != "") && (pieces[1 - turn].indexOf(hexagon.innerHTML) != -1))
+        						{
+        								hexagon.style.color = "red";
+
+        						} else if (hexagon.innerHTML == "") {
+        								hexagon.innerHTML = dot;
+        						}
+        					}
+        				}
+        			}
+        		}
+
+        		if ((picked == "\u2659")) // White pawn
+        		{
+
+        			var hexagonId;
+        			var hexagon;
+
+	       			for (hexagonId = 0; hexagonId <= 230; hexagonId++)
+	       			{
+
+        				hexagon = document.getElementById(hexagonId);
+        			
+        				if (hexagon)
+       					{
+	        				if ((hexagonId - pickedId) == 22)
+	        				{
+        						if (hexagon.innerHTML == "") {
+        								hexagon.innerHTML = dot;
+        						}
+        					}
+
+        					if ( ((hexagonId - pickedId) == 44) && (firstPawnIDs.indexOf(parseInt(pickedId,10)) != -1) )
+        					{
+        						if (hexagon.innerHTML == "") {
+        								hexagon.innerHTML = dot;
+        								hexagon.style.color = "green";
+        						}
+        					}
+
+        					if ( ((hexagonId - pickedId) == 10) || ((hexagonId - pickedId) == 12) ) {
+        						if ( (hexagon.innerHTML != "")  && ( pieces[1 - turn].indexOf(hexagon.innerHTML) != -1) ) {
+        							hexagon.style.color = "red";
+        						}
+        					}
+        				}
+        			}
+        		}
+
+        		if ((picked == "\u265F")) // Black pawn
+        		{
+
+        			var hexagonId;
+        			var hexagon;
+
+	       			for (hexagonId = 0; hexagonId <= 230; hexagonId++)
+	       			{
+
+        				hexagon = document.getElementById(hexagonId);
+        			
+        				if (hexagon)
+       					{
+	        				if ((hexagonId - pickedId) == -22)
+	        				{
+        						if (hexagon.innerHTML == "") {
+        								hexagon.innerHTML = dot;
+        						}
+        					}
+        					
+        					if ( ((hexagonId - pickedId) == -44) && (firstPawnIDs.indexOf(parseInt(pickedId,10)) != -1) )
+        					{
+        						if (hexagon.innerHTML == "") {
+        								hexagon.innerHTML = dot;
+        								hexagon.style.color = "green";
+        						}
+        					}
+
+        					if ( ((hexagonId - pickedId) == -10) || ((hexagonId - pickedId) == -12) ) {
+        						if ( (hexagon.innerHTML != "")  && ( pieces[1 - turn].indexOf(hexagon.innerHTML) != -1) ) {
+        							hexagon.style.color = "red";
+        						}
+        					}
+        				}
+        			}
+        		}
+        	}
+        	else if ((picking == true) && ((e.innerHTML == dot) || (e.style.color == "red") || (e.id == pickedId))) // If picking and clicks
+        	{
+        		if ((e.style.color == "green")) // If clicked on a green cell while lifted
+        		{
+        			firstPawnIDs.splice(firstPawnIDs.indexOf(parseInt(pickedId,10)),1);  // remove pickedId from the firstPawnIDs list so you can't move a pawn double again
+        		}
+
+    			e.innerHTML = picked;
+    			picked = "";
+    			picking = false;
+
+    			if (e.id != pickedId) {
+    				turn = 1 - turn;
+    			}
+    			
+    			var hexagonId;
+    			var hexagon;
+
+    			// cleanup
+
+    			for (hexagonId = 0; hexagonId <= 230; hexagonId++)
+    			{
+
+    				hexagon = document.getElementById(hexagonId);
+
+    				if (hexagon)
+    				{
+    					if (hexagon.innerHTML == dot) {
+    						hexagon.innerHTML = "";
+    					}
+    					if (hexagon.style.color == "red") {
+    						hexagon.style.color = "black";
+    					}
+    					if (hexagon.style.color == "green") {
+    						hexagon.style.color = "black";
+    					}
+					}
+				}
+
+    			document.getElementById("turndisplay").innerHTML = turntexts[turn];
+    		}
+    	}
+	}
+
+	firstPawnIDs = [45,53, 57, 63, 69, 73, 81, 83, 93, 137,147,149,157,161,167,173,177,185];
+
+	init = [];
+
+	var i;
+
+	for (i=0; i <= 230; i++) {
+		var currentElement = document.getElementById(i)
+		if (currentElement) {
+			init.push(currentElement.innerHTML);
+		}
+	}
+
+	function restart() {
+		var copy = init.slice();
+		firstPawnIDs = [45,53, 57, 63, 69, 73, 81, 83, 93, 137,147,149,157,161,167,173,177,185];
+
+		for (i=0; i <= 230; i++) {
+			var currentElement = document.getElementById(i)
+			if (currentElement) {
+					currentElement.innerHTML = copy.shift();
+			}
+		}
+
+	}
+
+
+	</script>
+
 	<p>This website contains a version of Glinski's hexagonal chess written in Javascript and compatible with most modern web browsers.</p>
 
 	<p><a href="https://en.wikipedia.org/wiki/Hexagonal_chess#Gli%C5%84ski's_hexagonal_chess"><b>Gliński's</b> hexagonal <b>chess</b></a>, invented by <strong>Władysław Gliński</strong> in 1936 and first launched in Britain in 1949, is "probably the most widely played of the hexagonal chess games".
 	</p>
+
+
+	<button onclick="restart()">Restart</button>
+
 </body>
