@@ -39,7 +39,7 @@
 		padding-right: 8.5%;
 	}
 	.cell {
-		/*outline: 3px solid black;*/
+		/* outline: 3px solid black; */
 	}
 	.s {
 		width: 9.0909%;
@@ -401,7 +401,7 @@
         						}
         					}
 
-        					if ( ((hexagonId - pickedId) == 44) && (firstPawnIDs.indexOf(parseInt(pickedId,10)) != -1) )
+        					if ( ((hexagonId - pickedId) == 44) && (firstPawnIDs.indexOf(parseInt(pickedId,10)) != -1) && ( (document.getElementById(pickedId + 22).innerHTML == "") || (document.getElementById(pickedId + 22).innerHTML == dot) ) )
         					{
         						if (hexagon.innerHTML == "") {
         								hexagon.innerHTML = dot;
@@ -438,7 +438,7 @@
         						}
         					}
         					
-        					if ( ((hexagonId - pickedId) == -44) && (firstPawnIDs.indexOf(parseInt(pickedId,10)) != -1) )
+        					if ( ((hexagonId - pickedId) == -44) && (firstPawnIDs.indexOf(parseInt(pickedId,10)) != -1)  && ( (document.getElementById(pickedId - 22).innerHTML == "") || (document.getElementById(pickedId - 22).innerHTML == dot) ) )
         					{
         						if (hexagon.innerHTML == "") {
         								hexagon.innerHTML = dot;
@@ -453,6 +453,32 @@
         					}
         				}
         			}
+        		}
+
+        		if ((picked == "\u2658") || (picked == "\u265E")) {  // Either knight
+
+        			var hexagonId;
+        			var hexagon;
+
+	       			for (hexagonId = 0; hexagonId <= 230; hexagonId++)
+	       			{
+
+        				hexagon = document.getElementById(hexagonId);
+        			
+        				if (hexagon)
+       					{
+	        				if ( ( horsemoves.indexOf(parseInt(hexagonId - pickedId)) != -1 ) || ( horsemoves.indexOf(parseInt(pickedId - hexagonId)) != -1 ) )
+	        				{
+        						if (hexagon.innerHTML == "") {
+        								hexagon.innerHTML = dot;
+        						}
+        						if ( (hexagon.innerHTML != "")  && ( pieces[1 - turn].indexOf(hexagon.innerHTML) != -1) ) {
+        							hexagon.style.color = "red";
+        						}
+        					}
+        				}
+        			}
+
         		}
         	}
         	else if ((picking == true) && ((e.innerHTML == dot) || (e.style.color == "red") || (e.id == pickedId))) // If picking and clicks
@@ -500,7 +526,7 @@
 	}
 
 	firstPawnIDs = [45,53, 57, 63, 69, 73, 81, 83, 93, 137,147,149,157,161,167,173,177,185];
-
+	horsemoves = [8, 14, 42, 46, 54, 56];
 	init = [];
 
 	var i;
@@ -513,6 +539,10 @@
 	}
 
 	function restart() {
+		turn = 0;
+		picking = false;
+		picked = "";
+
 		var copy = init.slice();
 		firstPawnIDs = [45,53, 57, 63, 69, 73, 81, 83, 93, 137,147,149,157,161,167,173,177,185];
 
