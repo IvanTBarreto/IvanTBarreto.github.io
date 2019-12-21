@@ -401,8 +401,9 @@
         						}
         					}
 
-        					if ( ((hexagonId - pickedId) == 44) && (firstPawnIDs.indexOf(parseInt(pickedId,10)) != -1) && ( (document.getElementById(pickedId + 22).innerHTML == "") || (document.getElementById(pickedId + 22).innerHTML == dot) ) )
+        					if (((hexagonId - pickedId) == 44) && (firstPawnIDs.indexOf(parseInt(pickedId,10)) != -1) && ( (document.getElementById(parseInt(pickedId,10) + 22).innerHTML == "") || (document.getElementById(parseInt(pickedId,10) + 22).innerHTML == dot)))
         					{
+
         						if (hexagon.innerHTML == "") {
         								hexagon.innerHTML = dot;
         								hexagon.style.color = "green";
