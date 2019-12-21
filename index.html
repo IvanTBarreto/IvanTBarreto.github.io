@@ -366,15 +366,14 @@
 
         				if (hexagon)
         				{
-        					if ((Math.abs(pickedId - hexagonId) == 22) || (Math.abs(pickedId - hexagonId) == 12) || (Math.abs(pickedId - hexagonId) == 10))
+        					if ( kingmoves.indexOf(parseInt(hexagonId - pickedId)) != -1 )
         					{
 
-        						if ((hexagon.innerHTML != "") && (pieces[1 - turn].indexOf(hexagon.innerHTML) != -1))
-        						{
-        							hexagon.style.color = "red";
-
-        						} else if (hexagon.innerHTML == "") {
+        						if (hexagon.innerHTML == "") {
         							hexagon.innerHTML = dot;
+        						}
+        						if ( (hexagon.innerHTML != "")  && ( pieces[1 - turn].indexOf(hexagon.innerHTML) != -1) ) {
+        							hexagon.style.color = "red";
         						}
         					}
         				}
@@ -469,7 +468,7 @@
 
         				if (hexagon)
         				{
-        					if ( ( knightmoves.indexOf(parseInt(hexagonId - pickedId)) != -1 ) || ( knightmoves.indexOf(parseInt(pickedId - hexagonId)) != -1 ) )
+        					if ( knightmoves.indexOf(parseInt(hexagonId - pickedId)) != -1 )
         					{
         						if (hexagon.innerHTML == "") {
         							hexagon.innerHTML = dot;
@@ -643,7 +642,9 @@
 
     firstPawnIDs = [45,53, 57, 63, 69, 73, 81, 83, 93, 137,147,149,157,161,167,173,177,185];
     
-    knightmoves = [8, 14, 42, 46, 54, 56];
+    knightmoves = [8, 14, 42, 46, 54, 56, -8, -14, -42, -46, -54, -56];
+
+    kingmoves = [2,10,12,22,32,34,-2,-10,-12,-22,-32,-34];
 
     queenmoves = [2,10,12,22,32,34,-2,-10,-12,-22,-32,-34];
     queenxdisp = [2,-1,1,0,-1,1,-2,1,-1,0,1,-1];
@@ -681,16 +682,6 @@
     	}
 
     }
-
-    function getcoords(x,y) {
-    	if (document.getElementById(x + 11*y)) {
-    		if (-5 <= x && x <= 5) {
-    			return 5 + x + 11*y;
-    		}
-    	}
-    	return null;
-    }
-
 
 </script>
 
