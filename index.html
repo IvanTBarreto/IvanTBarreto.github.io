@@ -599,10 +599,6 @@
         			firstPawnIDs.splice(firstPawnIDs.indexOf(parseInt(pickedId,10)),1);  // remove pickedId from the firstPawnIDs list so you can't move a pawn double again
         		}
 
-        		if (firstPawnIDs.indexOf(parseInt(e.id,10)) != -1) {
-        			firstPawnIDs.splice(firstPawnIDs.indexOf(parseInt(e.id,10)),1);  // remove pickedId from the firstPawnIDs list so you can't doublemove the eating pawn
-        		}
-
         		e.innerHTML = picked;
         		picked = "";
         		picking = false;
