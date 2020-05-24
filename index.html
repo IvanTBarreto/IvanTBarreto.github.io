@@ -336,6 +336,7 @@
 	// KING QUEEN ROOK BISHOP KNIGHT PAWN
 
 	dot = "\u2022";
+	cross = "\u2716";
 
 	pickedId = 0;
 
@@ -369,11 +370,12 @@
 				document.getElementById("turndisplay").style.color = "green"
 			}, 1000);	
 		}
+		
     		if ((picking == false) && (e.innerHTML != "") && (pieces[turn].indexOf(e.innerHTML) != -1)) // If clicked on your own piece while not lifted
     		{
     			pickedId = e.id;
     			picked = e.innerHTML;
-    			e.innerHTML = "";
+    			e.innerHTML = cross;
     			picking = true;
 
         		if ((picked == "\u2654") || (picked == "\u265A")) // Either king
@@ -616,9 +618,9 @@
         		}
         	}
 
-        	else if ((picking == true) && ((e.innerHTML == dot) || (e.style.color == "red") || (e.id == pickedId))) // If picking and clicks
+        	else if ((picking == true) && ((e.innerHTML == dot) || (e.style.color == "red") || (e.innerHTML == cross))) // If picking and clicks
         	{
-        		if ((firstPawnIDs.indexOf(parseInt(pickedId,10)) != -1) && (e.id != pickedId)) {
+        		if ((firstPawnIDs.indexOf(parseInt(pickedId,10)) != -1) && (e.innerHTML != cross)) {
         			firstPawnIDs.splice(firstPawnIDs.indexOf(parseInt(pickedId,10)),1);  // remove pickedId from the firstPawnIDs list so you can't move a pawn double again
         		}
 
@@ -626,7 +628,7 @@
         		picked = "";
         		picking = false;
 
-        		if (e.id != pickedId) {
+        		if (e.innerHTML != cross) {
         			turn = 1 - turn;
         		}
 
@@ -642,7 +644,7 @@
 
     				if (hexagon)
     				{
-    					if (hexagon.innerHTML == dot) {
+    					if ((hexagon.innerHTML == dot) || (hexagon.innerHTML == cross)) {
     						hexagon.innerHTML = "";
     					}
     					if (hexagon.style.color == "red") {
