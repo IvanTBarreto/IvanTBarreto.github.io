@@ -623,14 +623,14 @@
         		if ((firstPawnIDs.indexOf(parseInt(pickedId,10)) != -1) && (e.innerHTML != cross)) {
         			firstPawnIDs.splice(firstPawnIDs.indexOf(parseInt(pickedId,10)),1);  // remove pickedId from the firstPawnIDs list so you can't move a pawn double again
         		}
+			
+			if (e.innerHTML != cross) {
+        			turn = 1 - turn;
+        		}
 
         		e.innerHTML = picked;
         		picked = "";
         		picking = false;
-
-        		if (e.innerHTML != cross) {
-        			turn = 1 - turn;
-        		}
 
         		var hexagonId;
         		var hexagon;
