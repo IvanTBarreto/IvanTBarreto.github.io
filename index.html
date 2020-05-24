@@ -595,7 +595,7 @@
 
         	else if ((picking == true) && ((e.innerHTML == dot) || (e.style.color == "red") || (e.id == pickedId))) // If picking and clicks
         	{
-        		if (firstPawnIDs.indexOf(parseInt(pickedId,10)) != -1) {
+        		if ((firstPawnIDs.indexOf(parseInt(pickedId,10)) != -1) && (e.id != pickedId)) {
         			firstPawnIDs.splice(firstPawnIDs.indexOf(parseInt(pickedId,10)),1);  // remove pickedId from the firstPawnIDs list so you can't move a pawn double again
         		}
 
