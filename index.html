@@ -350,7 +350,25 @@
 
     	if (e.className && e.className.indexOf('cell') != -1) // If clicked on a cell
     	{
-
+		if ((picking == false) && (e.innerHTML != "") && (pieces[1 - turn].indexOf(e.innerHTML) != -1)) // If clicked on your enemy piece while not lifted
+    		{
+			document.getElementById(turndisplay).style.color = "red"
+			setTimeout(function(){
+				document.getElementById(turndisplay).style.color = "green"
+			}, 200);
+			setTimeout(function(){
+				document.getElementById(turndisplay).style.color = "red"
+			}, 400);
+			setTimeout(function(){
+				document.getElementById(turndisplay).style.color = "green"
+			}, 600);
+			setTimeout(function(){
+				document.getElementById(turndisplay).style.color = "red"
+			}, 800);
+			setTimeout(function(){
+				document.getElementById(turndisplay).style.color = "green"
+			}, 1000);	
+		}
     		if ((picking == false) && (e.innerHTML != "") && (pieces[turn].indexOf(e.innerHTML) != -1)) // If clicked on your own piece while not lifted
     		{
     			pickedId = e.id;
